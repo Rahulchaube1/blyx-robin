@@ -1,0 +1,35 @@
+use gregorianday;
+use yearorigin;
+
+fn robin_finite(values: vector) -> bool {
+    let mut i = 0;
+    while i < len(values) {
+        let value = at(values, i);
+        if !(value - value == 0.0) {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+fn robin_compute(year: f64, month: f64, day: f64) -> vector {
+    let date = gregorianday_ordinal(year, month, day);
+    let origin = yearorigin_offset(year);
+    if len(date) == 0 || len(origin) == 0 {
+        return [];
+    }
+    let index = at(origin, 0) + at(date, 0);
+    [index, (index - 1.0) % 7.0, at(date, 0), at(date, 2)]
+}
+
+// Convert a validated civil date into an ordinal, weekday and comparable day number.
+// Returns [day number with 0001-01-01 = 1, Monday-zero weekday, day-of-year, days in month]. This is a calendar computation independent of machine locale.
+pub fn robin_date(year: f64, month: f64, day: f64) -> vector {
+    if !(year >= 1.0 && year <= 9007199254740991.0 && year % 1.0 == 0.0) { return []; }
+    if !(month >= 1.0 && month <= 9007199254740991.0 && month % 1.0 == 0.0) { return []; }
+    if !(day >= 1.0 && day <= 9007199254740991.0 && day % 1.0 == 0.0) { return []; }
+    let result = robin_compute(year, month, day);
+    if !robin_finite(result) { return []; }
+    result
+}
