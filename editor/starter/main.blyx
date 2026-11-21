@@ -1,0 +1,14 @@
+use vendor::robin::robin;
+
+fn main() {
+    let year = 1970.0;
+    let month = 1.0;
+    let day = 1.0;
+    let result = robin_date(year, month, day);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}

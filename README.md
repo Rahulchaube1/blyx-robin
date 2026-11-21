@@ -1,10 +1,14 @@
-<img src="assets/logo.png" width="112" height="112" alt="Robin logo">
+<img src="assets/logo.png" width="112" height="112" alt="An olive-brown robin lifts its head above a round orange breast.">
 
 # Robin
 
 Convert a validated civil date into an ordinal, weekday and comparable day number. This Blyx workflow framework is part of the calendar, scheduling and local time collection.
 
 Month lengths and century leap rules affect both date validation and weekday calculations. Resolve both from the same Gregorian day number. [Python, proleptic Gregorian calendar](https://docs.python.org/3/library/calendar.html)
+
+## Editor extension
+
+Install **RahulChaube.blyx-robin** to run the worked example and use the framework’s function completions in a Blyx file. Open an empty `.blyx` file, enter `blyx-robin-demo`, then choose **Blyx: Run File**. [Editor downloads](https://www.blyx-lang.space/packages/robin#editor) · [Download the extension](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-robin-0.1.0.vsix) · [Starter with framework source](https://github.com/Rahulchaube1/blyxxxx/releases/download/framework-editors-v0.1.0/blyx-robin-starter-0.1.0.zip)
 
 ## Install and run
 
@@ -82,7 +86,7 @@ This release includes identical copies of both library modules so a tagged clone
 
 ## Verification and contributions
 
-The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-robin/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The package artwork uses [Lucide icons](https://lucide.dev/license); see [artwork notices](assets/NOTICE.txt).
+The regression suite in [tests.blyx](tests.blyx) checks the example, boundary cases and invalid inputs. Include a short reproducer and your compiler version in [an issue](https://github.com/Rahulchaube1/blyx-robin/issues). The source is dual-licensed under [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE). The [artwork notice](assets/NOTICE.txt) records credits for earlier editions.
 
 ## Connect with Rahul Chaube
 
